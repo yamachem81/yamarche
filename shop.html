@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Shop | Yamarche</title>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #222;
+      background: #fff;
+    }
+
+
+    /* =========================
+       SHOP PAGE
+       ========================= */
+
+    .shop-page {
+      max-width: 750px;
+      margin: 35px auto 80px;
+
+      /* index.html と同じ黒いバー */
+      border-top: 14px solid #111;
+    }
+
+
+    /* =========================
+       NAVIGATION
+       ========================= */
+
+    nav {
+      text-align: right;
+      padding: 22px 25px;
+      background: #f5f5f5;
+    }
+
+    nav a {
+      margin-left: 25px;
+      color: #222;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+
+    /* =========================
+       SHOP TITLE
+       ========================= */
+
+    .shop-title {
+      text-align: center;
+      padding: 50px 20px 45px;
+    }
+
+    .shop-title h1 {
+      margin: 0 0 10px;
+      font-size: 34px;
+      font-weight: normal;
+      letter-spacing: 3px;
+    }
+
+    .shop-title p {
+      margin: 0;
+      font-size: 14px;
+      color: #777;
+    }
+
+
+    /* =========================
+       PRODUCTS
+       ========================= */
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 45px 30px;
+      padding: 0 40px 70px;
+    }
+
+
+    /* Product */
+
+    .product {
+      text-align: center;
+    }
+
+
+    /* Product image */
+
+    .product-image {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+
+      background: #f2f2f2;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      color: #999;
+      font-size: 13px;
+    }
+
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+
+    /* Product name */
+
+    .product h2 {
+      margin: 18px 0 8px;
+
+      font-size: 17px;
+      font-weight: normal;
+    }
+
+
+    /* Price */
+
+    .price {
+      margin: 0 0 18px;
+      font-size: 15px;
+    }
+
+
+    /* Button */
+
+    .detail-button {
+      display: inline-block;
+
+      padding: 11px 25px;
+
+      background: #222;
+      color: #fff;
+
+      text-decoration: none;
+
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    .detail-button:hover {
+      opacity: 0.8;
+    }
+
+
+    /* =========================
+       FOOTER
+       ========================= */
+
+    footer {
+      text-align: center;
+      padding: 25px 20px 35px;
+
+      border-top: 1px solid #ddd;
+
+      font-size: 12px;
+      color: #777;
+      line-height: 1.8;
+    }
+
+
+    /* =========================
+       SMARTPHONE
+       ========================= */
+
+    @media (max-width: 700px) {
+
+      .shop-page {
+        margin: 15px;
+      }
+
+      nav {
+        text-align: center;
+      }
+
+      nav a {
+        margin: 0 12px;
+      }
+
+      .product-grid {
+        grid-template-columns: 1fr;
+        padding: 0 30px 60px;
+      }
+
+      .shop-title h1 {
+        font-size: 28px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <main class="shop-page">
+
+
+    <!-- Navigation -->
+
+    <nav>
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="about.html">
+        About
+      </a>
+
+    </nav>
+
+
+    <!-- Shop title -->
+
+    <section class="shop-title">
+
+      <h1>SHOP</h1>
+
+      <p>
+        Yamarcheの商品
+      </p>
+
+    </section>
+
+
+    <!-- Products -->
+
+    <section class="product-grid">
+
+
+      <!-- Product 001 -->
+
+      <article class="product">
+
+        <div class="product-image">
+          商品写真
+        </div>
+
+        <h2>
+          最初の商品
+        </h2>
+
+        <p class="price">
+          ¥100
+        </p>
+
+        <a
+          class="detail-button"
+          href="#">
+          詳しく見る
+        </a>
+
+      </article>
+
+
+      <!-- Coming Soon -->
+
+      <article class="product">
+
+        <div class="product-image">
+          Coming Soon
+        </div>
+
+        <h2>
+          Coming Soon
+        </h2>
+
+      </article>
+
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+      日本国内のみ発送<br>
+      Shipping within Japan only.
+
+      <br><br>
+
+      © 2026 Yamarche
+
+    </footer>
+
+
+  </main>
+
+
+</body>
+
+</html>

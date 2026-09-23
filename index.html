@@ -1,17 +1,269 @@
-Ôªø<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>yamarche</title>
+
+  <title>Yamarche</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+      color: #222;
+      background: #ffffff;
+    }
+
+    /* ---------- header ---------- */
+
+    header {
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 7%;
+      background: white;
+    }
+
+    .site-name {
+      font-size: 22px;
+      font-weight: normal;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: #222;
+      text-decoration: none;
+      margin-left: 30px;
+      font-size: 14px;
+    }
+
+    /* ---------- main visual ---------- */
+
+    .hero {
+      display: flex;
+      max-width: 1100px;
+      margin: 20px auto 80px;
+      min-height: 520px;
+    }
+
+    .hero-logo {
+      width: 50%;
+      background: #e7839b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 50px;
+    }
+
+    .hero-logo img {
+      width: 100%;
+      max-width: 430px;
+      height: auto;
+    }
+
+    .hero-message {
+      width: 50%;
+      background: #f5f5f5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 50px;
+    }
+
+    .hero-message h1 {
+      font-size: 34px;
+      font-weight: normal;
+      margin: 0 0 15px;
+    }
+
+    .hero-message p {
+      font-size: 17px;
+      margin-bottom: 35px;
+    }
+
+    .shop-button {
+      display: inline-block;
+      padding: 13px 35px;
+      background: #222;
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      letter-spacing: 2px;
+    }
+
+    /* ---------- products ---------- */
+
+    .products {
+      text-align: center;
+      padding: 30px 20px 80px;
+    }
+
+    .products h2 {
+      font-weight: normal;
+      font-size: 26px;
+      margin-bottom: 40px;
+    }
+
+    .product-card {
+      width: 300px;
+      margin: auto;
+    }
+
+    .product-placeholder {
+      height: 300px;
+      background: #f1f1f1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #888;
+    }
+
+    .product-name {
+      margin-top: 18px;
+      font-size: 17px;
+    }
+
+    .price {
+      margin-top: 8px;
+      font-size: 16px;
+    }
+
+    /* ---------- footer ---------- */
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      border-top: 1px solid #ddd;
+      font-size: 13px;
+      line-height: 2;
+    }
+
+    /* ---------- smartphone ---------- */
+
+    @media (max-width: 700px) {
+
+      header {
+        padding: 0 20px;
+      }
+
+      .hero {
+        display: block;
+        margin: 0 15px 60px;
+      }
+
+      .hero-logo,
+      .hero-message {
+        width: 100%;
+        min-height: 350px;
+      }
+
+      .hero-message h1 {
+        font-size: 27px;
+      }
+
+      nav a {
+        margin-left: 15px;
+      }
+    }
+
+  </style>
 </head>
+
 
 <body>
 
-  <h1>Yamarche</h1>
-  <p>yamachem's little market</p>
+<header>
 
-  <p>„Åü„Å†„ÅÑ„ÅæÊ∫ñÂÇô‰∏≠„Åß„Åô„ÄÇ</p>
+  <div class="site-name">
+    Yamarche
+  </div>
+
+  <nav>
+    <a href="#shop">Shop</a>
+    <a href="#about">About</a>
+  </nav>
+
+</header>
+
+
+<main>
+
+  <section class="hero">
+
+    <div class="hero-logo">
+
+      <!-- Ç±Ç±Ç…YamarcheÇÃÉçÉSâÊëú -->
+      <img src="images/yamarche-logo.png"
+           alt="Yamarche">
+
+    </div>
+
+
+    <div class="hero-message">
+
+      <h1>Yamarche</h1>
+
+      <p>
+        yamachemÇÃè¨Ç≥Ç»ÉIÉìÉâÉCÉìÉ}ÉãÉVÉF
+      </p>
+
+      <a class="shop-button" href="#shop">
+        SHOP
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <section class="products" id="shop">
+
+    <h2>YamarcheÇÃè§ïi</h2>
+
+    <div class="product-card">
+
+      <div class="product-placeholder">
+        è§ïié ê^
+      </div>
+
+      <div class="product-name">
+        ç≈èâÇÃè§ïi
+      </div>
+
+      <div class="price">
+        \100
+      </div>
+
+    </div>
+
+  </section>
+
+
+</main>
+
+
+<footer id="about">
+
+  <div>
+    ì˙ñ{çëì‡ÇÃÇ›î≠ëó
+  </div>
+
+  <div>
+    Shipping within Japan only.
+  </div>
+
+  <div>
+    c 2026 Yamarche
+  </div>
+
+</footer>
 
 </body>
 </html>

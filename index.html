@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,171 +8,195 @@
   <title>Yamarche</title>
 
   <style>
+
     * {
       box-sizing: border-box;
     }
 
     body {
       margin: 0;
-      font-family: Arial, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       color: #222;
-      background: #ffffff;
+      background: #fff;
     }
 
-    /* ---------- header ---------- */
 
-    header {
-      height: 80px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 7%;
-      background: white;
-    }
-
-    .site-name {
-      font-size: 22px;
-      font-weight: normal;
-      letter-spacing: 1px;
-    }
-
-    nav a {
-      color: #222;
-      text-decoration: none;
-      margin-left: 30px;
-      font-size: 14px;
-    }
-
-    /* ---------- main visual ---------- */
+    /* =========================
+       HERO
+       ========================= */
 
     .hero {
-      display: flex;
       max-width: 750px;
-      margin: 20px auto 80px;
-      min-height: 520px;
-      border-top: 20px solid #111;
+      margin: 35px auto 80px;
+
+      /* 上の黒いバー */
+      border-top: 14px solid #111;
     }
+
+
+    /* 左右のエリア */
+
+    .hero-content {
+      display: flex;
+      height: 520px;
+    }
+
+
+    /* =========================
+       LEFT：Yamarche Logo
+       ========================= */
 
     .hero-logo {
       width: 50%;
       background: #e7839b;
+
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 50px;
+
+      padding: 35px;
     }
 
     .hero-logo img {
       width: 100%;
-      max-width: 430px;
+      max-width: 330px;
       height: auto;
     }
+
+
+    /* =========================
+       RIGHT
+       ========================= */
 
     .hero-message {
       width: 50%;
       background: #f5f5f5;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 50px;
+
+      position: relative;
     }
 
-    .hero-message h1 {
+
+    /* Navigation */
+
+    .hero-message nav {
+      position: absolute;
+      top: 22px;
+      left: 0;
+
+      width: 100%;
+      text-align: center;
+    }
+
+    .hero-message nav a {
+      margin: 0 14px;
+
+      color: #222;
+      text-decoration: none;
+
+      font-size: 14px;
+    }
+
+    .hero-message nav a:hover {
+      text-decoration: underline;
+    }
+
+
+    /* 中央のメッセージ */
+
+    .message-content {
+      position: absolute;
+
+      top: 50%;
+      left: 50%;
+
+      transform: translate(-50%, -50%);
+
+      width: 90%;
+      text-align: center;
+    }
+
+    .message-content h1 {
+      margin: 0 0 15px;
+
       font-size: 34px;
       font-weight: normal;
-      margin: 0 0 15px;
     }
 
-    .hero-message p {
-      font-size: 17px;
-      margin-bottom: 35px;
+    .message-content p {
+      margin: 0 0 35px;
+
+      font-size: 14px;
+      line-height: 1.7;
     }
+
+
+    /* SHOP button */
 
     .shop-button {
       display: inline-block;
+
       padding: 13px 35px;
+
       background: #222;
-      color: white;
+      color: #fff;
+
       text-decoration: none;
-      font-size: 14px;
+
+      font-size: 13px;
       letter-spacing: 2px;
     }
 
-    /* ---------- products ---------- */
-
-    .products {
-      text-align: center;
-      padding: 30px 20px 80px;
+    .shop-button:hover {
+      opacity: 0.8;
     }
 
-    .products h2 {
-      font-weight: normal;
-      font-size: 26px;
-      margin-bottom: 40px;
-    }
 
-    .product-card {
-      width: 300px;
-      margin: auto;
-    }
-
-    .product-placeholder {
-      height: 300px;
-      background: #f1f1f1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #888;
-    }
-
-    .product-name {
-      margin-top: 18px;
-      font-size: 17px;
-    }
-
-    .price {
-      margin-top: 8px;
-      font-size: 16px;
-    }
-
-    /* ---------- footer ---------- */
+    /* =========================
+       FOOTER
+       ========================= */
 
     footer {
+      margin: 0 auto 40px;
+
       text-align: center;
-      padding: 40px 20px;
-      border-top: 1px solid #ddd;
-      font-size: 13px;
-      line-height: 2;
+
+      font-size: 12px;
+      color: #777;
     }
 
-    /* ---------- smartphone ---------- */
+
+    /* =========================
+       Smartphone
+       ========================= */
 
     @media (max-width: 700px) {
 
-      header {
-        padding: 0 20px;
+      .hero {
+        margin: 15px;
       }
 
-      .hero {
+      .hero-content {
         display: block;
-        margin: 0 15px 60px;
+        height: auto;
       }
 
       .hero-logo,
       .hero-message {
         width: 100%;
+      }
+
+      .hero-logo {
         min-height: 350px;
       }
 
-      .hero-message h1 {
-        font-size: 27px;
+      .hero-message {
+        min-height: 350px;
       }
 
-      nav a {
-        margin-left: 15px;
+      .message-content h1 {
+        font-size: 28px;
       }
+
     }
 
   </style>
@@ -180,48 +205,77 @@
 
 <body>
 
-<header>
-
-  <div class="site-name">
-    Yamarche
-  </div>
-
-  <nav>
-    <a href="shop.html">Shop</a>
-    <a href="about.html">About</a>
-  </nav>
-
-</header>
-
-
-<main>
 
   <section class="hero">
 
-    <div class="hero-logo">
-
-      <!-- ここにYamarcheのロゴ画像 -->
-      <img src="images/yamarche-logo.png"
-           alt="Yamarche">
-
-    </div>
+    <div class="hero-content">
 
 
-    <div class="hero-message">
+      <!-- LEFT -->
 
-      <h1>Yamarche</h1>
+      <div class="hero-logo">
 
-      <p>
-        yamachemの小さなオンラインマルシェ
-      </p>
+        <img
+          src="images/yamarche-logo.png"
+          alt="Yamarche">
 
-      <a class="shop-button" href="shop.html">
-        SHOP
-      </a>
+      </div>
+
+
+      <!-- RIGHT -->
+
+      <div class="hero-message">
+
+
+        <nav>
+
+          <a href="shop.html">
+            Shop
+          </a>
+
+          <a href="about.html">
+            About
+          </a>
+
+        </nav>
+
+
+        <div class="message-content">
+
+          <h1>
+            Yamarche
+          </h1>
+
+          <p>
+            yamachemの小さなオンラインマルシェ
+          </p>
+
+          <a
+            class="shop-button"
+            href="shop.html">
+
+            SHOP
+
+          </a>
+
+        </div>
+
+
+      </div>
+
 
     </div>
 
   </section>
-</main>
+
+
+  <footer>
+
+    © 2026 Yamarche
+
+  </footer>
+
+
 </body>
+
 </html>
